@@ -1,49 +1,21 @@
-//Write a Java Program to show the Student Details
+//Write a Java Program to show details by placing college as static 
 class Student{
-	String FirstName;
-	String LastName;
-	String RegdNo;
-	int Marks;
-	void setFirstName(String f){
-		FirstName=f;
+	int rollno;
+	String name;
+	static String college = "VITB";
+	Student(int r,String n){
+		rollno=r;
+		name=n;
 	}
-	void setLastName(String l){
-		LastName=l;
-	}
-	void setRegdNo(String r){
-		RegdNo=r;
-	}
-	void setMarks(int m){
-		Marks=m;
-	}
-	void getFirstName(){
-		System.out.println("First Name : "+FirstName);
-	}
-	void getLastName(){
-		System.out.println("Last Name : "+LastName );
-	}
-	void getRegdNo(){
-		System.out.println("Regd no:"+RegdNo);
-	}
-	void getMarks(){
-		System.out.println("Marks :"+Marks);
-	}
-	void getFullName(){
-		System.out.println("Full Name : "+FirstName+" "+LastName);
+	void display(){
+		System.out.println("Roll no: "+"   "+rollno+"\nName:  "+name+"   "+"\nCollege:  "+" "+college);
 	}
 }
 public class StudentDemo{
 	public static void main(String args[]){
-		Student s =new Student();
-		s.setFirstName("HARI");
-		s.setLastName("KUMAR");
-		s.setRegdNo("24PA1A05M0");
-		s.setMarks(90);
-		s.getFirstName();
-		s.getLastName();
-		s.getRegdNo();
-		s.getMarks();
-		s.getFullName();
+		Student s1=new Student(101,"JAGADEESH");
+		Student s2=new Student(102,"MANI");
+		s1.display();
+		s2.display();
 	}
-	
 }
